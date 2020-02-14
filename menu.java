@@ -1,10 +1,10 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
-public class menu {
+public class Menu {
     public static void main(String args[]) {
         Scanner sn = new Scanner(System.in);
         boolean entrar = true;
-        int opcion; //Guardaremos la opcion del usuario
+        int opcion;
         int n;
         int m;
  
@@ -29,11 +29,12 @@ public class menu {
                         m = sn.nextInt();
                         System.out.println("Numero de columnas");
                         n = sn.nextInt();
-                        matriz Obj1 = new matriz(m,n);
-                        matriz Obj2 = new matriz(m,n);
-                        opera resultado1 = new opera();
+                        Matriz Obj1 = new Matriz(m,n);
+                        Matriz Obj2 = new Matriz(m,n);
+                        Opera resultado1 = new Opera();
                         resultado1.suma(Obj1.matrix, Obj2.matrix);
                         //System.out.println(resultado1.sum[0][0]);
+                        imprime prin1 = new imprime(resultado1.sum);
 
                         break;
                     case 2:
@@ -41,20 +42,22 @@ public class menu {
                         System.out.println("Has decidido calcular la diagonal principal");
                         System.out.println("Ingresa la dimension de la matriz");
                         n = sn.nextInt();
-                        matriz Obj = new matriz(n,n);
-                        opera resultado2 = new opera();
-                        resultado2.diagonal(Obj.matrix);
-                        System.out.println(resultado2.diag[0]);
+                        Matriz Obj = new Matriz(n,n);
+                        Opera resultado2 = new Opera();
+                        resultado2.getDiagonal(Obj.matrix);
+                        //System.out.println(resultado2.diag[0]);
+                        imprime prin2 = new imprime(resultado2.diag);
                         break;
                     case 3:
                         //System.out.println("Has seleccionado la opcion 3");
-                        System.out.println("Has decidido calcular la diagonal invsersa");
+                        System.out.println("Has decidido calcular la diagonal inversa");
                         System.out.println("Ingresa la dimension de la matriz");
                         n = sn.nextInt();
-                        matriz Obje = new matriz(n,n);
-                        opera resultado3 = new opera();
-                        resultado3.diagonalInv(Obje.matrix);
-                        System.out.println(resultado3.diagInv[0]);
+                        Matriz Obje = new Matriz(n,n);
+                        Opera resultado3 = new Opera();
+                        resultado3.getDiagonalInv(Obje.matrix);
+                        //System.out.println(resultado3.diagInv[0]);
+                        imprime prin3 = new imprime(resultado3.diagInv);
                         break;
                     case 4:
                         entrar = false;
