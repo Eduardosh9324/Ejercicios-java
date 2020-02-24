@@ -1,4 +1,4 @@
-public class Opera {
+public class Calculadora {
     public int[][] array1;
     public int[][] array2;
     public int[][] sum;

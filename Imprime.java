@@ -1,19 +1,17 @@
-public class imprime{
-    //public int[];
-    //public int[][];
+public class Imprime{
     public int n;
     public int m;
 
-    public imprime(int[] arr){
-        this.n = arr.length;
+    public Imprime(int[] arr){
+        n = arr.length;
         for(int i = 0; i < n;i++){
             System.out.print(arr[i]+"\t");
         }
     }
 
-    public imprime(int[][] arr){
-        this.m = arr.length;
-        this.n = arr[0].length;
+    public Imprime(int[][] arr){
+        m = arr.length;
+        n = arr[0].length;
         for(int i = 0;i<m;i++) {
 			for(int j=0;j<n;j++) {
 				if(j!=n-1) {

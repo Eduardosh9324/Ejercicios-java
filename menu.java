@@ -29,38 +29,33 @@ public class Menu {
                         m = sn.nextInt();
                         System.out.println("Numero de columnas");
                         n = sn.nextInt();
-                        Matriz Obj1 = new Matriz(m,n);
-                        Matriz Obj2 = new Matriz(m,n);
-                        Opera resultado1 = new Opera();
-                        resultado1.suma(Obj1.matrix, Obj2.matrix);
-                        //System.out.println(resultado1.sum[0][0]);
-                        imprime prin1 = new imprime(resultado1.sum);
-
+                        Matriz obj1 = new Matriz(m,n);
+                        Matriz obj2 = new Matriz(m,n);
+                        Calculadora resultado1 = new Calculadora();
+                        resultado1.suma(obj1.matrix, obj2.matrix);
+                        Imprime prin1 = new Imprime(resultado1.sum);
                         break;
                     case 2:
-                        //System.out.println("Has seleccionado la opcion 2");
                         System.out.println("Has decidido calcular la diagonal principal");
                         System.out.println("Ingresa la dimension de la matriz");
                         n = sn.nextInt();
-                        Matriz Obj = new Matriz(n,n);
-                        Opera resultado2 = new Opera();
-                        resultado2.getDiagonal(Obj.matrix);
-                        //System.out.println(resultado2.diag[0]);
-                        imprime prin2 = new imprime(resultado2.diag);
+                        Matriz obj = new Matriz(n,n);
+                        Calculadora resultado2 = new Calculadora();
+                        resultado2.getDiagonal(obj.matrix);
+                        Imprime prin2 = new Imprime(resultado2.diag);
                         break;
                     case 3:
-                        //System.out.println("Has seleccionado la opcion 3");
                         System.out.println("Has decidido calcular la diagonal inversa");
                         System.out.println("Ingresa la dimension de la matriz");
                         n = sn.nextInt();
-                        Matriz Obje = new Matriz(n,n);
-                        Opera resultado3 = new Opera();
-                        resultado3.getDiagonalInv(Obje.matrix);
-                        //System.out.println(resultado3.diagInv[0]);
-                        imprime prin3 = new imprime(resultado3.diagInv);
+                        Matriz obje = new Matriz(n,n);      
+                        Calculadora resultado3 = new Calculadora();
+                        resultado3.getDiagonalInv(obje.matrix);
+                        Imprime prin3 = new Imprime(resultado3.diagInv);
                         break;
                     case 4:
                         entrar = false;
+                        System.out.println("Hasta pronto!");
                         break;
                     default:
                         System.out.println("Solo números entre 1 y 4");
