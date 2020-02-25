@@ -12,8 +12,8 @@ public class Imprime{
     public Imprime(int[][] arr){
         m = arr.length;
         n = arr[0].length;
-        for(int i = 0;i<m;i++) {
-			for(int j=0;j<n;j++) {
+        for(int i = 0;i < m;i++) {
+			for(int j = 0;j < n;j++) {
 				if(j!=n-1) {
 					System.out.print(""+arr[i][j]+"\t");
 				}else {

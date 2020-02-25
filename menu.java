@@ -15,7 +15,14 @@ public class Menu {
             System.out.println("2. Diagonal principal");
             System.out.println("3. Diagonal inversa");
             System.out.println("4. Salir");
- 
+            //variables y clases para las operaciones y guardado de elementos
+            Matriz matriz = new Matriz();
+            int[][] matriz1;
+            int[][] matriz2;
+            int[][] resultadoMatriz;
+            int[] resultadoVector;
+            Calculadora opera = new Calculadora();
+
             try {
  
                 System.out.println("Escribe una de las opciones");
@@ -29,33 +36,30 @@ public class Menu {
                         m = sn.nextInt();
                         System.out.println("Numero de columnas");
                         n = sn.nextInt();
-                        Matriz obj1 = new Matriz(m,n);
-                        Matriz obj2 = new Matriz(m,n);
-                        Calculadora resultado1 = new Calculadora();
-                        resultado1.suma(obj1.matrix, obj2.matrix);
-                        Imprime prin1 = new Imprime(resultado1.sum);
+                        matriz1 = matriz.Matriz(n, m);
+                        matriz2 = matriz.Matriz(n, m);
+                        resultadoMatriz = opera.suma(matriz1, matriz2);
+                        Imprime prin1 = new Imprime(resultadoMatriz);
                         break;
                     case 2:
                         System.out.println("Has decidido calcular la diagonal principal");
                         System.out.println("Ingresa la dimension de la matriz");
                         n = sn.nextInt();
-                        Matriz obj = new Matriz(n,n);
-                        Calculadora resultado2 = new Calculadora();
-                        resultado2.getDiagonal(obj.matrix);
-                        Imprime prin2 = new Imprime(resultado2.diag);
+                        matriz1 = matriz.Matriz(n,n);
+                        resultadoVector = opera.getDiagonal(matriz1);
+                        Imprime prin2 = new Imprime(resultadoVector);
                         break;
                     case 3:
                         System.out.println("Has decidido calcular la diagonal inversa");
                         System.out.println("Ingresa la dimension de la matriz");
                         n = sn.nextInt();
-                        Matriz obje = new Matriz(n,n);      
-                        Calculadora resultado3 = new Calculadora();
-                        resultado3.getDiagonalInv(obje.matrix);
-                        Imprime prin3 = new Imprime(resultado3.diagInv);
+                        matriz1 = matriz.Matriz(n,n);
+                        resultadoVector = opera.getDiagonalInv(matriz1);
+                        Imprime prin3 = new Imprime(resultadoVector);
                         break;
                     case 4:
                         entrar = false;
-                        System.out.println("Hasta pronto!");
+                        System.out.println("Hasta pronto! ");
                         break;
                     default:
                         System.out.println("Solo números entre 1 y 4");
